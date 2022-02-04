@@ -1,0 +1,31 @@
+.loginButton{
+    background-color:#ee3b1a;
+    ;
+}
+.loginButton:hover{
+    background-color: #EC2500 !important;
+    
+}
+.active {
+    opacity: 1;
+    font-weight: 400;
+    color: #fff;
+}
+/* .inactive {
+    opacity: 0.9;
+    font-weight: thin;
+} */
+.height{
+    height: 216px;
+}
+.vertical{
+    position: absolute;
+    top: 95px;
+    transform: rotate(90.18deg);
+}
+.icon-block-active{
+    opacity: 1
+}
+.icon-block-inactive{
+    opacity: 0.85
+}
