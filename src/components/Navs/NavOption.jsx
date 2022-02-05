@@ -12,10 +12,9 @@ export default function NavOption() {
   const router = useRouter();
 
   return (
-    <div className="option-container">
+    <div className="option-container" style={{ width: `100%` }}>
       <div
         className={`${router.pathname == "/login" ? "active" : ""} loginButton`}
-        style={{}}
       >
         <Link href="#">
           <a
@@ -41,7 +40,7 @@ export default function NavOption() {
             <Icon
               icon="tabler:steering-wheel"
               className="option-icon"
-              fontSize="43px"
+              fontSize="33px"
             />
             <span className={styles.vertical}>CAR SELECT</span>
           </a>
@@ -58,7 +57,7 @@ export default function NavOption() {
               <Icon
                 icon="mdi:garage-variant"
                 className="option-icon"
-                fontSize="50px"
+                fontSize="40px"
               />
               <span className={styles.vertical}>GARAGE</span>
             </a>

@@ -16,12 +16,15 @@
     font-weight: thin;
 } */
 .height{
-    height: 216px;
+    height: 190px;
 }
 .vertical{
     position: absolute;
-    top: 95px;
+    top: 87px;
+    width: 99px;
     transform: rotate(90.18deg);
+    font-size: 17px;
+    border:0px solid red;
 }
 .icon-block-active{
     opacity: 1

@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 99.1vw;
+}
 html,
 body {
   position: relative;
@@ -14,7 +20,6 @@ body {
     background: #1a1a1a;
     display: flex;
     flex-direction: column;
-    width: 30%;
     align-items: center;
     justify-content: center;
 
@@ -38,11 +43,31 @@ body {
         background-color: #ec2500;
       }
     }
+    .nav__white {
+      border: #000 solid 0px;
+      color: rgba(0, 0, 0, 0.75);
+      font-weight: 100;
+
+      &:hover,
+      &.active {
+        color: rgb(0, 0, 0);
+        font-weight: 900;
+      }
+    }
+    .nav__black {
+      color: rgba($color: #fff, $alpha: 0.75);
+      font-weight: lighter;
+      &:hover,
+      &.active {
+        color: rgba($color: #fff, $alpha: 1);
+        font-weight: bolder;
+      }
+    }
     a {
       position: relative;
       font-style: normal;
       font-weight: normal;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 23px;
       display: flex;
       flex-direction: column;
@@ -51,13 +76,9 @@ body {
       align-items: center;
       color: #d1d1d1;
       & .option-icon {
-        font-size: 50px;
+        font-size: 45px;
         color: inherit;
       }
     }
   }
-}
-
-* {
-  box-sizing: border-box;
 }
