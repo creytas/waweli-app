@@ -22,13 +22,7 @@ export default function Cars({
       }}
     >
       <div style={{ width: `45%`, border: `0px solid #fff` }}>
-        <Image
-          src={suzuki}
-          width={165}
-          height={158}
-          alt="waweli cars"
-          objectFit
-        />
+        <Image src={src} width={165} height={158} alt="waweli cars" objectFit />
       </div>
       <div
         style={{
