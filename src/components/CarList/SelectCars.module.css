@@ -2,9 +2,12 @@
     width: 80%;
     border-radius: none;
     margin: 4% 0% 0% 0%;
+    padding: 1% auto;
     display: flex;
-    justify-content: center;
-    border: 2px solid #000;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #fff;
+    background: transparent;
 }
 .inputBase{
     border: 0px solid red;
@@ -12,9 +15,14 @@
     align-items: center;
     text-align: center;
     padding: 3%;
+    background-color: transparent;
+}
+.inputBase:focus{
+    border: none;
 }
 .iconButton{
     padding: "10px"; 
+    color: #fff;
     border: 0px solid red;
 }
 .carList{

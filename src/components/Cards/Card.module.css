@@ -1,6 +1,6 @@
 .carCard{
     width: 97%;
-    height: 185px;
+    height: 190px;
     background: #1c1c1c;
     margin: 1.5% auto;
     display: flex;
@@ -30,6 +30,7 @@
 }
 .carCardDetailDescription{
     border: 0px solid #fff;
+    text-overflow: ellipsis;
     position: absolute;
     top: 12px;
     font-weight: 300;
