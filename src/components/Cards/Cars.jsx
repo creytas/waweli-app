@@ -80,7 +80,7 @@ export default function Cars({
         >
           <Icon
             icon="tabler:steering-wheel"
-            fontSize="30px"
+            fontSize="31px"
             color="rgba(255,255,255,0.85)"
             style={{ margin: `0% 2.5%` }}
           />
