@@ -1,0 +1,66 @@
+.carCard{
+    width: 97%;
+    height: 185px;
+    background: #1c1c1c;
+    margin: 1.5% auto;
+    display: flex;
+    cursor: pointer;
+}
+.carCard:hover,.carCard.active{
+    background: #888;
+}
+.carCardImage{
+    width: 45%; 
+    border: 0px solid #fff;
+}
+.carCardDetail{
+    position: relative;
+    border: 0px solid blue;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.carCardDetailTitle{
+    border: 0px solid #fff;
+    position: absolute;
+    top: 3px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.carCardDetailDescription{
+    border: 0px solid #fff;
+    position: absolute;
+    top: 12px;
+    font-weight: 300;
+    margin: 10% auto;
+    color: rgba(255,255,255,0.75);
+}
+.carCard:hover .carCardDetailDescription,
+.carCard.active .carCardDetailDescription{
+    font-weight: 400;
+    color: rgba(255,255,255,1);
+}
+.carCardDetailPrice{
+    width: 100%;
+    position: absolute;
+    top: 97px;
+    right: 40px;
+    border: 0px solid #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 6% 8% 1% 0%;
+    color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+}
+.price{
+    margin-left: 2%;
+    font-weight: 600;
+}
+.carCardDetailIcon{
+    font-size:31px;
+    color:rgba(255,255,255,0.85);
+    margin: 0% 2.5% ;
+}

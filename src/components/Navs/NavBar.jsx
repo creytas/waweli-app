@@ -38,8 +38,7 @@ export default function NavBar({ navItems, color, width }) {
         sx={{
           width: `${width}`,
           border: `0px solid #c1c1c1`,
-          padding: `2.5%`,
-          margin: `1% auto`,
+          padding: `2.2%`,
           display: `flex`,
           justifyContent: `space-evenly`,
           alignItems: `center`,
