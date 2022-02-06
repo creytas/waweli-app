@@ -1,23 +1,10 @@
-import Cars from "../Cards/Cars.jsx";
+import CarList from "./CarList.js";
 import { TextField, InputBase, Paper, IconButton } from "@mui/material";
 import NavBar from "../Navs/NavBar.jsx";
 import { Icon } from "@iconify/react";
 import { navBlackCarsItems } from "../layout";
-import suzuki from "../../../public/images/suzuki_swift.png";
 import styles from "../layout.module.css";
 import carStyles from "./SelectCars.module.css";
-
-const cars = [
-  {
-    id: 1,
-    carName: `Suzuki Swift`,
-    carImage: `${suzuki}`,
-    description: `This is the new 2020 Swift.
-      Sporty simplicity, that’s as practical as You are... `,
-    buyingPrice: `25 300`,
-    rentalPrice: `15 475`,
-  },
-];
 
 export default function SelectCars() {
   return (
@@ -42,56 +29,7 @@ export default function SelectCars() {
           width="100%"
         />
       </header>
-      <div className={carStyles.carList}>
-        <Cars
-          src={suzuki}
-          carName={cars[0].carName}
-          description={cars[0].description}
-          buyingPrice={cars[0].buyingPrice}
-          rentalPrice={cars[0].rentalPrice}
-          key={cars[0].id}
-        />
-        <Cars
-          src={suzuki}
-          carName={cars[0].carName}
-          description={cars[0].description}
-          buyingPrice={cars[0].buyingPrice}
-          rentalPrice={cars[0].rentalPrice}
-          key={cars[0].id}
-        />
-        <Cars
-          src={suzuki}
-          carName={cars[0].carName}
-          description={cars[0].description}
-          buyingPrice={cars[0].buyingPrice}
-          rentalPrice={cars[0].rentalPrice}
-          key={cars[0].id}
-        />
-        <Cars
-          src={suzuki}
-          carName={cars[0].carName}
-          description={cars[0].description}
-          buyingPrice={cars[0].buyingPrice}
-          rentalPrice={cars[0].rentalPrice}
-          key={cars[0].id}
-        />
-        <Cars
-          src={suzuki}
-          carName={cars[0].carName}
-          description={cars[0].description}
-          buyingPrice={cars[0].buyingPrice}
-          rentalPrice={cars[0].rentalPrice}
-          key={cars[0].id}
-        />
-        <Cars
-          src={suzuki}
-          carName={cars[0].carName}
-          description={cars[0].description}
-          buyingPrice={cars[0].buyingPrice}
-          rentalPrice={cars[0].rentalPrice}
-          key={cars[0].id}
-        />
-      </div>
+      <CarList />
     </div>
   );
 }
