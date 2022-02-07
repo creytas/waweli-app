@@ -31,12 +31,13 @@ const StyledInputElement = styled("input")(
   `
 );
 
-export default function Input({ placeholder }) {
+export default function Input({ placeholder, type }) {
   return (
-    <span style={{ width: `90%`, border: `0px solid red`, padding: `2%` }}>
+    <span style={{ width: `95%`, border: `0px solid red`, padding: `2%` }}>
       <InputUnstyled
         components={{ Input: StyledInputElement }}
         placeholder={placeholder}
+        type={type}
       />
     </span>
   );

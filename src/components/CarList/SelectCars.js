@@ -1,6 +1,5 @@
 import CarList from "./CarList.js";
 import { TextField, InputBase, Paper, IconButton } from "@mui/material";
-// import InputUnstyled from "@mui/base/InputUnstyled";
 import Input from "../Input.jsx";
 import NavBar from "../Navs/NavBar.jsx";
 import { Icon } from "@iconify/react";
@@ -13,11 +12,6 @@ export default function SelectCars() {
     <div className={styles.rightContainer}>
       <header className={styles.header}>
         <Paper className={carStyles.paper} component="form">
-          {/* <InputBase
-            placeholder="Toyota Corola"
-            className={carStyles.inputBase}
-          /> */}
-          {/* <InputUnstyled className={carStyles.inputBase} /> */}
           <Input />
           <IconButton
             type="submit"

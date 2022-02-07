@@ -1,0 +1,65 @@
+.formContainer{
+    border: 0px solid #fff;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formTitle{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 16% 0% 5% 0%;
+    color:rgba(255,255,255,0.85);
+}
+.forgotLink{
+    width: 80%;
+    margin:1% 0%;
+    border: 0px solid blue;
+    color:rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.forgotLink a{
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    cursor: pointer;
+}
+.forgotLink a:hover{
+    font-weight: 500;
+    color: rgba(255,255,255,1);
+}
+.buttonContainer{
+    border: 0px solid blue;
+    width: 35%;
+    margin:2% auto;
+
+}
+.button{
+    width:100%;
+    display: flex;
+    padding: 8% 0%;
+    align-items: center;
+    font-size: 17px;
+    background: rgba(255, 255, 255, 0.85);
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 600;
+}
+.button:hover{
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+.divider{
+    width: 40%;
+    color: rgba(255, 255, 255, 0.85);
+}
+.inputIcon{
+    color: rgba(255,255,255,0.85);
+    font-size: 35px;
+    margin: 1.5%;
+}
+input:focus .inputIcon{
+    color: rgba(255,255,255,1);
+}
