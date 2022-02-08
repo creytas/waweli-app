@@ -23,7 +23,7 @@ export const navWhiteCarsItems = [
 ];
 
 import SelectCars from "./CarList/SelectCars.js";
-import UserPage from "./User/UserPage.js";
+import FormPage from "./User/FormPage.js";
 
 export default function Layout({ children, home }) {
   return (
@@ -81,7 +81,7 @@ export default function Layout({ children, home }) {
             <NavOption />
           </aside>
           {/* <SelectCars /> */}
-          <UserPage />
+          <FormPage />
         </div>
       </main>
     </div>

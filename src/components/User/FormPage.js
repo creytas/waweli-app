@@ -1,17 +1,15 @@
-import styles from "../layout.module.css";
+import React from "react";
+import UserPage from "./UserPage";
+import SigninForm from "./SigninForm";
+import SignupForm from "./SignupForm";
+import formStyles from "./Form.module.css";
 
-export default function FormPage({ children, className, title }) {
+export default function FormPage() {
+  const formTitle = "WELCOME TO WAWELI CARS";
   return (
-    <div
-      className={styles.rightContainer}
-      style={{
-        overflowY: `scroll`,
-        scrollbarWidth: `none`,
-        msOverflowStyle: `none`,
-      }}
-    >
-      <h2 className={className}>{title}</h2>
-      {children}
-    </div>
+    <UserPage className={formStyles.formTitle} title={formTitle}>
+      {/* <SigninForm /> */}
+      <SignupForm />
+    </UserPage>
   );
 }
