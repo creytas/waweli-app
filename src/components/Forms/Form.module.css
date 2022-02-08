@@ -60,6 +60,37 @@
     font-size: 35px;
     margin: 1.5%;
 }
-input:focus .inputIcon{
+.radioGroup{
+    width: 80%;
+    margin-top: 4%;
+    padding: 2%;
+    display: flex;
+    color: #fff;
+    border: 0px solid #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+.radioContainer{
+    color: #fff;
+    border: 0px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.radioGroupLabel{
+    color: #fff;
+    font-size: 20px; 
+    font-weight: 400;
+}
+.radioLabel{
+    color: #fff;
+    font-size: 20px; 
+    font-weight: 500;
+}
+.radio{
+    color: rgba(255,255,255,0.85);
+    size: 50px;
+}
+.radio:checked{
     color: rgba(255,255,255,1);
 }
