@@ -7,7 +7,7 @@ const StyledInputElement = styled("input")(
   ({ theme }) => `
     width: 100%;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.5;
     color: ${theme.palette.mode === "dark" ? black[100] : white[100]};
     background: ${theme.palette.mode === "dark" ? "" : black[100]};
@@ -31,13 +31,14 @@ const StyledInputElement = styled("input")(
   `
 );
 
-export default function Input({ placeholder, type }) {
+export default function Input({ placeholder, type, name }) {
   return (
     <span style={{ width: `95%`, border: `0px solid red`, padding: `2%` }}>
       <InputUnstyled
         components={{ Input: StyledInputElement }}
         placeholder={placeholder}
         type={type}
+        name={name}
       />
     </span>
   );

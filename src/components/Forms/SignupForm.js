@@ -19,28 +19,36 @@ export default function SignupForm() {
   return (
     <Paper component="form" className={formStyles.formContainer}>
       <span className={carStyles.paper}>
-        <Input type="text" />
+        <Input name="email" type="email" placeholder="example@mymail.com" />
         <Icon icon="feather:mail" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input type="password" />
+        <Input
+          name="password"
+          type="password"
+          placeholder="set your password"
+        />
         <Icon icon="akar-icons:eye-slashed" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input type="password" />
+        <Input
+          type="password"
+          name="passwordConfirmation"
+          placeholder="confirm your password"
+        />
         <Icon icon="akar-icons:eye-slashed" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input type="text" />
+        <Input type="text" name="firstName" placeholder="John" />
         <Icon icon="heroicons-outline:user" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input type="text" />
+        <Input type="text" name="lastName" placeholder="Doe" />
         <Icon icon="heroicons-outline:user" className={formStyles.inputIcon} />
       </span>
       <span className={formStyles.radioGroup}>
         <span className={formStyles.radioGroupLabel}>Gender</span>
-        <RadioGroup defaultValue="male" name="radio-buttons-group" row>
+        <RadioGroup defaultValue="male" name="gender" row>
           <span className={formStyles.radioContainer}>
             <Radio className={formStyles.radio} value="male" color="default" />
             <span className={formStyles.radioLabel}>Male</span>
@@ -56,18 +64,18 @@ export default function SignupForm() {
         </RadioGroup>
       </span>
       <span className={carStyles.paper}>
-        <Input type="date" />
+        <Input type="date" name="birthdate" />
         <Icon
           icon="ant-design:calendar-outlined"
           className={formStyles.inputIcon}
         />
       </span>
       <span className={carStyles.paper}>
-        <Input type="text" />
+        <Input type="text" name="adress" placeholder="set your place adress" />
         <Icon icon="ic:outline-place" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input type="text" />
+        <Input type="tel" name="phoneNumber" placeholder="+243 829 999 999" />
         <Icon icon="bi:phone" className={formStyles.inputIcon} />
       </span>
       <span className={formStyles.buttonContainer} style={{ marginTop: `5%` }}>
