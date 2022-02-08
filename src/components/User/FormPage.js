@@ -1,7 +1,6 @@
 import styles from "../layout.module.css";
-import formStyles from "./Form.module.css";
 
-export default function FormPage({ children }) {
+export default function FormPage({ children, className, title }) {
   return (
     <div
       className={styles.rightContainer}
@@ -11,7 +10,7 @@ export default function FormPage({ children }) {
         msOverflowStyle: `none`,
       }}
     >
-      <h2 className={formStyles.formTitle}>WELCOME TO WAWELI CARS</h2>
+      <h2 className={className}>{title}</h2>
       {children}
     </div>
   );

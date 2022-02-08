@@ -23,7 +23,7 @@ export const navWhiteCarsItems = [
 ];
 
 import SelectCars from "./CarList/SelectCars.js";
-import UserPage from "./Forms/UserPage.js";
+import UserPage from "./User/UserPage.js";
 
 export default function Layout({ children, home }) {
   return (
