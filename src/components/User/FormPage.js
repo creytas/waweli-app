@@ -7,8 +7,10 @@ export default function FormPage() {
   const title = "WELCOME TO WAWELI CARS";
   return (
     <UserPage className={formStyles.formTitle} title={title}>
-      {/* <SigninForm /> */}
-      <SignupForm />
+      <div className={formStyles.list}>
+        {/* <SigninForm /> */}
+        <SignupForm />
+      </div>
     </UserPage>
   );
 }

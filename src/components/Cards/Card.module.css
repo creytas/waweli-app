@@ -22,6 +22,7 @@
     color: #fff;
 }
 .carCardDetailTitle{
+    color: rgba(255,255,255,0.75);
     border: 0px solid #fff;
     position: absolute;
     top: 3px;
@@ -64,4 +65,20 @@
     font-size:31px;
     color:rgba(255,255,255,0.85);
     margin: 0% 2.5% ;
+}
+.transactionCard{
+    border: 0px solid red;
+    width: 90.5%;
+    height: 190px;
+    background: #1c1c1c;
+    margin: 1.5% 0% 2% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.table td{
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
 }

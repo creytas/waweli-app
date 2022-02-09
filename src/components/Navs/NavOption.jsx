@@ -10,7 +10,7 @@ export default function NavOption() {
   const [signedIn, setSignedIn] = useState(false);
   const [connexionLabel, setConnexionLabel] = useState("SIGN IN");
   const router = useRouter();
-
+  const userName = "Randy";
   return (
     <div className="option-container" style={{ width: `100%` }}>
       <div
@@ -22,7 +22,7 @@ export default function NavOption() {
               setSignedIn(!signedIn);
               signedIn === true
                 ? setConnexionLabel("SIGN IN")
-                : setConnexionLabel("SIGN OUT");
+                : setConnexionLabel(userName.toUpperCase());
             }}
           >
             <Icon icon="heroicons-outline:user" className="option-icon" />

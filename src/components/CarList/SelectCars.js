@@ -12,7 +12,7 @@ export default function SelectCars() {
     <div className={styles.rightContainer}>
       <header className={styles.header}>
         <Paper className={carStyles.paper} component="form">
-          <Input />
+          <Input name="search" type="search" placeholder="Toyota Corolla" />
           <IconButton
             type="submit"
             className={carStyles.iconButton}
