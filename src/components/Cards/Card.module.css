@@ -76,8 +76,18 @@
     flex-direction: column;
     align-items: center;
 }
+.list{
+    border: 0px solid red;
+    max-height: 145px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+    
+
 .table td{
     border: none;
+    padding-top: 4%;
     font-size: 15px;
     font-weight: 400;
     color: #fff;

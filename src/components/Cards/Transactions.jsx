@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { Table, TableBody, TableRow, TableCell } from "@mui/material";
 import cardStyles from "./Card.module.css";
 
-export default function Transactions({ icon, title, data }) {
+export default function Transactions({ icon, title, rows }) {
   return (
     <div className={cardStyles.transactionCard}>
       <span
@@ -29,19 +29,28 @@ export default function Transactions({ icon, title, data }) {
           {title.toUpperCase()}
         </h2>
       </span>
-      <div>
-        <Table>
+      <div className={cardStyles.list}>
+        <Table size="small">
           <TableBody>
-            <TableRow className={cardStyles.table}>
-              <TableCell align="center">22/04/2018</TableCell>
-              <TableCell align="center">Range Rover - Velar</TableCell>
-              <TableCell align="right">$ 75 475</TableCell>
-            </TableRow>
-            <TableRow className={cardStyles.table}>
-              <TableCell align="center">22/04/2018</TableCell>
-              <TableCell align="center">Range Rover - Velar</TableCell>
-              <TableCell align="right">$ 75 475</TableCell>
-            </TableRow>
+            {rows === undefined ? (
+              <></>
+            ) : (
+              rows.map((row) => (
+                <TableRow className={cardStyles.table} key={row.id}>
+                  <TableCell align="center">{row.date}</TableCell>
+                  <TableCell align="left">{row.car}</TableCell>
+                  <TableCell align="right">
+                    {title != "mechanics" ? (
+                      <span>
+                        $ <strong>{row.price}</strong>
+                      </span>
+                    ) : (
+                      row.cause
+                    )}
+                  </TableCell>
+                </TableRow>
+              ))
+            )}
           </TableBody>
         </Table>
       </div>
