@@ -1,6 +1,6 @@
+import { useForm } from "react-hook-form";
 import CarList from "./CarList.js";
-import { TextField, InputBase, Paper, IconButton } from "@mui/material";
-import Input from "../Input.jsx";
+import { TextField, Paper, IconButton } from "@mui/material";
 import NavBar from "../Navs/NavBar.jsx";
 import { Icon } from "@iconify/react";
 import { navBlackCarsItems } from "../layout";
@@ -8,11 +8,29 @@ import styles from "../layout.module.css";
 import carStyles from "./SelectCars.module.css";
 
 export default function SelectCars() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
   return (
     <div className={styles.rightContainer}>
       <header className={styles.header}>
-        <Paper className={carStyles.paper} component="form">
-          <Input name="search" type="search" placeholder="Toyota Corolla" />
+        <Paper
+          className={carStyles.paper}
+          component="form"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <input
+            className={formStyles.input}
+            {...register("search")}
+            placeholder="Toyota Corolla"
+            type="search"
+          />
+          {/* <Input name="search" type="search" placeholder="Toyota Corolla" /> */}
           <IconButton
             type="submit"
             className={carStyles.iconButton}

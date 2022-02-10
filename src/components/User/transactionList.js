@@ -5,13 +5,11 @@ const buyedCars = [
   { date: "2021-12-25", car: "Range Rover - Velar", price: 75475 },
   { date: "2016-04-13", car: "Toyota - Rav4", price: 5365 },
   { date: "2011-07-07", car: "Suzuki - Swift", price: 3100 },
-  { date: "2006-02-25", car: "fiat - Mini", price: 1400 },
 ];
 const rentedCars = [
   { date: "2020-06-30", car: "Toyota - Hiace Van", price: 1250 },
   { date: "2019-06-30", car: "Toyota - Hiace Van", price: 1250 },
   { date: "2018-06-30", car: "Toyota - Hiace Van", price: 1250 },
-  { date: "2017-06-30", car: "Toyota - Hiace Van", price: 1250 },
 ];
 const soldCars = [];
 const mechanics = [

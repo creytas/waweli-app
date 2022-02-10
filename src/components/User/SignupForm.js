@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import {
   FormControlLabel,
   FormControl,
@@ -12,38 +13,78 @@ import {
 } from "@mui/material";
 import carStyles from "../CarList/SelectCars.module.css";
 import formStyles from "./Form.module.css";
-import Input from "../Input";
 import { Icon } from "@iconify/react";
 
 export default function SignupForm() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
   return (
-    <Paper component="form" className={formStyles.formContainer}>
+    <Paper
+      component="form"
+      onSubmit={handleSubmit(onSubmit)}
+      className={formStyles.formContainer}
+    >
       <span className={carStyles.paper}>
-        <Input name="email" type="email" placeholder="example@mymail.com" />
+        <input
+          className={formStyles.input}
+          {...register("email")}
+          placeholder="example@mymail.com"
+          type="email"
+        />
         <Icon icon="feather:mail" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input
+        <input
+          className={formStyles.input}
+          {...register("password")}
+          placeholder="set your password"
+          type="password"
+        />
+        {/* <Input
           name="password"
           type="password"
           placeholder="set your password"
-        />
+        /> */}
         <Icon icon="akar-icons:eye-slashed" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input
+        <input
+          className={formStyles.input}
+          {...register("passwordConfirmation")}
+          placeholder="confirm your password"
+          type="password"
+        />
+        {/* <Input
           type="password"
           name="passwordConfirmation"
           placeholder="confirm your password"
-        />
+        /> */}
         <Icon icon="akar-icons:eye-slashed" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input type="text" name="firstName" placeholder="John" />
+        <input
+          className={formStyles.input}
+          {...register("firstName")}
+          placeholder="John"
+          type="text"
+        />
+        {/* <Input type="text" name="firstName" placeholder="John" /> */}
         <Icon icon="heroicons-outline:user" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input type="text" name="lastName" placeholder="Doe" />
+        <input
+          className={formStyles.input}
+          {...register("firstName")}
+          placeholder="Doe"
+          type="text"
+        />
+        {/* <Input type="text" name="lastName" placeholder="Doe" /> */}
         <Icon icon="heroicons-outline:user" className={formStyles.inputIcon} />
       </span>
       <span className={formStyles.radioGroup}>
@@ -64,30 +105,51 @@ export default function SignupForm() {
         </RadioGroup>
       </span>
       <span className={carStyles.paper}>
-        <Input type="date" name="birthdate" />
+        <input
+          className={formStyles.input}
+          {...register("birthdate")}
+          type="date"
+        />
+        {/* <Input type="date" name="birthdate" /> */}
         <Icon
           icon="ant-design:calendar-outlined"
           className={formStyles.inputIcon}
         />
       </span>
       <span className={carStyles.paper}>
-        <Input type="text" name="adress" placeholder="set your place adress" />
+        <input
+          className={formStyles.input}
+          {...register("adress")}
+          type="text"
+          placeholder="set your place adress"
+        />
+        {/* <Input type="text" name="adress" placeholder="set your place adress" /> */}
         <Icon icon="ic:outline-place" className={formStyles.inputIcon} />
       </span>
       <span className={carStyles.paper}>
-        <Input type="tel" name="phoneNumber" placeholder="+243 829 999 999" />
+        <input
+          className={formStyles.input}
+          {...register("phoneNumber")}
+          type="tel"
+          placeholder="+243 829 999 999"
+        />
+        {/* <Input type="tel" name="phoneNumber" placeholder="+243 829 999 999" /> */}
         <Icon icon="bi:phone" className={formStyles.inputIcon} />
       </span>
       <span className={formStyles.buttonContainer} style={{ marginTop: `5%` }}>
-        <Button variant="contained" className={formStyles.button}>
-          register
+        <Button type="submit" variant="contained" className={formStyles.button}>
+          submit
         </Button>
       </span>
       <span>
         <Divider className={formStyles.divider}>OR</Divider>
       </span>
       <span className={formStyles.buttonContainer}>
-        <Button variant="contained" className={formStyles.button}>
+        <Button
+          onClick={handleSubmit(onSubmit)}
+          variant="contained"
+          className={formStyles.button}
+        >
           <Icon icon="bi:google" fontSize="20px" />
         </Button>
       </span>

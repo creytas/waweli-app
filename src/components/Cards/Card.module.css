@@ -92,3 +92,7 @@
     font-weight: 400;
     color: #fff;
 }
+.table:hover{
+    background: #888;
+    cursor: pointer;
+}
