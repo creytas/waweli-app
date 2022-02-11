@@ -9,6 +9,17 @@
     border: 2px solid #fff;
     background: transparent;
 }
+.paperError{
+    width: 80%;
+    border-radius: none;
+    margin: 4% 0% 0% 0%;
+    padding: 1% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #f00;
+    background: transparent;
+}
 .inputBase{
     border: 0px solid red;
     flex: 1;
