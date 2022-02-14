@@ -6,6 +6,7 @@ import { Icon } from "@iconify/react";
 import { navBlackCarsItems } from "../layout";
 import styles from "../layout.module.css";
 import carStyles from "./SelectCars.module.css";
+import formStyles from "../User/Form.module.css";
 
 export default function SelectCars() {
   const {
@@ -30,7 +31,6 @@ export default function SelectCars() {
             placeholder="Toyota Corolla"
             type="search"
           />
-          {/* <Input name="search" type="search" placeholder="Toyota Corolla" /> */}
           <IconButton
             type="submit"
             className={carStyles.iconButton}

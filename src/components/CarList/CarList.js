@@ -8,8 +8,8 @@ const cars = [
     carImage: `/images/suzuki_swift.png`,
     description: `This is the new 2020 Swift.
       Sporty simplicity, that’s as practical as You are... `,
-    buyingPrice: `25 300`,
-    rentalPrice: `15 475`,
+    buyingPrice: `16 840`,
+    rentalPrice: `10 475`,
   },
   {
     id: 2,

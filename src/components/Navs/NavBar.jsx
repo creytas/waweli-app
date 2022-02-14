@@ -3,13 +3,12 @@ import { useRouter } from "next/router";
 
 export default function NavBar({ navItems, color, width }) {
   const router = useRouter();
-  console.log(color);
   const nav = () => {
-    let iteration = 0;
+    var iteration = 0;
 
     return navItems.map((item) => {
       return (
-        <div key={iteration}>
+        <div key={iteration++}>
           <span>
             <Link
               href={`/${item.path}`}

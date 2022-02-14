@@ -16,6 +16,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border:0px solid red;
+  }
+  .alternateHeader{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border:0px solid red;
+ 
+  }
+  .alternateHeader.linkToHome{
+    border: 0px solid blue;
+    width: 24%;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
   }
   
   .backToHome {

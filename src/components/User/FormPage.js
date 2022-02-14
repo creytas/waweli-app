@@ -8,8 +8,8 @@ export default function FormPage() {
   return (
     <UserPage className={formStyles.formTitle} title={title}>
       <div className={formStyles.list}>
-        {/* <SigninForm /> */}
-        <SignupForm />
+        <SigninForm />
+        {/* <SignupForm /> */}
       </div>
     </UserPage>
   );

@@ -5,10 +5,10 @@ import Layout, {
   navBlackCarsItems,
   navWhiteCarsItems,
 } from "../src/components/layout";
-//import Cars from "../src/components/Cards/Cars";
 import NavOption from "../src/components/Navs/NavOption.jsx";
 import utilStyles from "../styles/utils.module.css";
 import { Icon } from "@iconify/react";
+import SelectVehicle from "./cars/select_vehicle";
 
 export default function Home() {
   return (
@@ -16,11 +16,7 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
-      <section style={{ display: `flex`, justifyContent: `space-between` }}>
-        
-
-      </section>
+      <SelectVehicle />
     </Layout>
   );
 }

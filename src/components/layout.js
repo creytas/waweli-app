@@ -2,6 +2,13 @@ import Head from "next/head";
 import NavBar from "./Navs/NavBar.jsx";
 import NavOption from "./Navs/NavOption.jsx";
 import styles from "./layout.module.css";
+import Image from "next/image";
+import SelectCars from "./CarList/SelectCars.js";
+import FormPage from "./User/FormPage.js";
+import UserDashboard from "./User/UserDashboard.js";
+import { Link } from "@mui/material";
+
+const waweli = "/favicon2.png";
 
 export const siteTitle = "waweli - cars at prices that appeal";
 export const navBlackUserItems = [
@@ -21,10 +28,6 @@ export const navWhiteCarsItems = [
   { label: "Shopping Tools", path: "shopping-tools" },
   { label: "Find a Dealer", path: "find-dealers" },
 ];
-
-import SelectCars from "./CarList/SelectCars.js";
-import FormPage from "./User/FormPage.js";
-import UserDashboard from "./User/UserDashboard.js";
 
 export default function Layout({ children, home }) {
   return (
@@ -59,7 +62,37 @@ export default function Layout({ children, home }) {
             position: `absolute`,
           }}
         >
-          <header className={styles.header}>waweli</header>
+          <header className={styles.alternateHeader}>
+            <Link className={`${styles.alternateHeader} ${styles.linkToHome}`}>
+              <span
+                style={{ border: `0px solid blue`, margin: `0.7% 0.7% 0% 2%` }}
+              >
+                <Image
+                  src={waweli}
+                  width="49"
+                  height="47"
+                  alt="waweli car logo"
+                />
+              </span>
+              <span style={{ fontSize: `20px`, fontWeight: `600` }}>
+                WAWELI CARS
+              </span>
+            </Link>
+            <span
+              style={{
+                width: `50%`,
+                border: `0px solid blue`,
+                display: `flex`,
+                alignItems: `center`,
+              }}
+            >
+              <NavBar
+                navItems={navWhiteCarsItems}
+                color="0, 0, 0"
+                width="100%"
+              />
+            </span>
+          </header>
           <div>{children}</div>
         </div>
         <div
@@ -81,8 +114,8 @@ export default function Layout({ children, home }) {
           >
             <NavOption />
           </aside>
-          {/* <SelectCars /> */}
-          <FormPage />
+          <SelectCars />
+          {/* <FormPage /> */}
           {/* <UserDashboard /> */}
         </div>
       </main>

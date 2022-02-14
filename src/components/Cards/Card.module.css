@@ -8,6 +8,7 @@
 }
 .carCard:hover,.carCard.active{
     background: #888;
+    /* background:#000; */
 }
 .carCardImage{
     width: 45%; 
